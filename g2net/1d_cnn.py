@@ -90,9 +90,7 @@ seed_torch(seed=CFG.seed)
 
 # TFRecord Loader
 gcs_paths = []
-# TODO fixme
-# for i, j in [(0, 4), (5, 9), (10, 14), (15, 19)]:
-for i, j in [(0, 4)]:
+for i, j in [(0, 4), (5, 9), (10, 14), (15, 19)]:
     path = f"g2net-waveform-tfrecords-train-{i}-{j}"
     n_trial = 0
     while True:
