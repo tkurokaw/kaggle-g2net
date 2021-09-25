@@ -578,6 +578,7 @@ if CFG.train:
             oof_df = pd.concat([oof_df, _oof_df])
             LOGGER.info(f"========== fold: {fold} result ==========")
             get_result(_oof_df)
+            oof_df.to_csv(SAVEDIR / f"oof_df_fold{fold}.csv", index=False)  # 追加
     # CV result
     LOGGER.info(f"========== CV ==========")
     get_result(oof_df)
